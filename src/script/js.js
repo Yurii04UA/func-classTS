@@ -40,6 +40,7 @@ const accountant3 = new AccountantInvoice(
     false
 )
 console.log('Ya')
+console.log('Ya')
 
 console.log(accountant1)
 console.log(accountant1.getInfo())
