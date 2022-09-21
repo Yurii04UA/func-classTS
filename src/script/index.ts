@@ -4,22 +4,24 @@ interface IInvoices {
     id: number
 }
 
-class Invoices {
+class Invoices implements IInvoices {
     name: string
     position: string
     id: number
+
     constructor(props: IInvoices) {
         this.name = props.name
         this.position = props.position
         this.id = props.id
     }
-    getInfo(): string {
+
+    getInfo() {
         return `Hello ${this.name}, your position ${this.position}. Id : ${this.id}`
     }
-    getName(): string {
+    getName() {
         return `Hello ${this.name}`
     }
-    static staticMethod(): string {
+    static staticMethod() {
         return 'I do not have access to instance'
     }
 }
