@@ -3,8 +3,16 @@ interface IInvoices {
     position: string
     id: number
 }
+interface IInvoicesImplements {
+    name: string
+    position: string
+    id: number
+    getInfo: () => void
+    getName: () => void
+    staticMethod: () => void
+}
 
-class Invoices implements IInvoices {
+class Invoices implements IInvoicesImplements {
     name: string
     position: string
     id: number
@@ -21,7 +29,7 @@ class Invoices implements IInvoices {
     getName() {
         return `Hello ${this.name}`
     }
-    static staticMethod() {
+    staticMethod() {
         return 'I do not have access to instance'
     }
 }
